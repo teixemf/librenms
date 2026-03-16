@@ -78,7 +78,9 @@ modules:
                     snmp_flags: '-OteQUax'
                     snmp_no_Ih_flag: ''
                     descr: 'BFD {{ InetAddress_CISCO-IETF-BFD-MIB::ciscoBfdSessAddr }}'
-                    index: 'ciscoBfdSessState.{{ $index }}'
+                    # Cisco can expose the same BFD session once per owning application.
+                    # The discriminator is the stable per-session identifier.
+                    index: 'ciscoBfdSessState.{{ CISCO-IETF-BFD-MIB::ciscoBfdSessDiscriminator }}'
                     group: 'BFD'
                     states:
                         - { value: 1, generic: 1, graph: 0, descr: 'adminDown' }
