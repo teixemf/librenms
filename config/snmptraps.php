@@ -41,6 +41,8 @@ return [
         'CISCO-CONFIG-MAN-MIB::ciscoConfigManEvent' => LibreNMS\Snmptrap\Handlers\CiscoConfigManEvent::class,
         'CISCO-PORT-SECURITY-MIB::cpsSecureMacAddrViolation' => LibreNMS\Snmptrap\Handlers\CiscoMacViolation::class,
         'CISCO-ERR-DISABLE-MIB::cErrDisableInterfaceEventRev1' => LibreNMS\Snmptrap\Handlers\CiscoErrDisableInterfaceEvent::class,
+        'CISCO-IETF-BFD-MIB::ciscoBfdSessDown' => LibreNMS\Snmptrap\Handlers\CiscoBfdSessDown::class,
+        'CISCO-IETF-BFD-MIB::ciscoBfdSessUp' => LibreNMS\Snmptrap\Handlers\CiscoBfdSessUp::class,
         'CISCO-IETF-DHCP-SERVER-MIB::cDhcpv4ServerStartTime' => LibreNMS\Snmptrap\Handlers\CiscoDHCPServerStart::class,
         'CISCO-IETF-DHCP-SERVER-MIB::cDhcpv4ServerStopTime' => LibreNMS\Snmptrap\Handlers\CiscoDHCPServerStop::class,
         'CISCO-IETF-DHCP-SERVER-MIB::cDhcpv4ServerFreeAddressLow' => LibreNMS\Snmptrap\Handlers\CiscoDHCPServerFreeAddressLow::class,
